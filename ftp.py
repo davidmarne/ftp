@@ -139,8 +139,8 @@ class MainFrame(qt.QMainWindow):
     #called when commandFinished signal is called
     #decides what to do with the reply depending on what command it was
     def commandFin(self, iden, ok):
-        print "iden: "+ str(iden)
-        print "val: " + self.identifiers[iden]
+        print("iden: "+ str(iden))
+        print("val: " + self.identifiers[iden])
         if self.identifiers[iden] == 'get':
             x = self.fileToSave.write(self.ftp.readAll())
             self.fileToSave.close()
